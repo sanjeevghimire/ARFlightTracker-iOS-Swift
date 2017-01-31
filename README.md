@@ -18,12 +18,12 @@ IBMFlightTracker is an iOS based app which tracks flight pushed by SDR/ADSB mess
  3. Run `pod install` from the project directory. This will install the dependencies define in `Podfile`
  4. Change MQTT credentials in class  util/MQTTConnection.swift using Xcode editor . You have to create a IoT app in IBM           bluemix to get the MQTT server credentials. The credentials looks like in the follwing format
  ```
-     API_KEY = "api_key"
-     API_TOKEN = "token"
+     API_KEY = "<api-key>"
+     API_TOKEN = "<token>"
      IOT_CLIENT = "a:<ORG_ID>:Flights"
      IOT_HOST = "<ORG_ID>.messaging.internetofthings.ibmcloud.com"
      IOT_PORT = 1883 (DEFAULT)
-     IOT_TOPIC = "iot-2/type/MQTTDevice/id/<DEVICE_ID>/evt/flight/fmt/json"
+     IOT_TOPIC = "iot-2/type/<DEVICE_TYPE>/id/<DEVICE_ID>/evt/flight/fmt/json"
  ```
  
  5. Build and Run
